@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Новый студент</h2>
+<form action="#" th:action="@{/createStudent}" th:object="${student}" method="post">
+    <label for="id">ID</label>
+    <input type="number" th:field="*{id}" id="id">
+    </br>
+    <label for="firstname">Имя</label>
+    <input type="text" th:field="*{firstname}" id="firstname">
+    </br>
+    <label for="surname">Фамилия</label>
+    <input type="text" th:field="*{surname}" id="surname">
+    </br>
+    <label for="patronymic">Отчество</label>
+    <input type="text" th:field="*{patronymic}" id="patronymic">
+    </br>
+    <label for="birthdate">День рождения</label>
+    <input type="text" th:field="*{birthdate}" id="birthdate">
+    </br>
+    <label for="studentGroup">Группа</label>
+    <input type="text" th:field="*{studentGroup}" id="studentGroup">
+    </br>
+    <input type="submit" value="Добавить студента">
+</form>
+</body>
+</html>
