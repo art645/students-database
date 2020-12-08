@@ -31,7 +31,8 @@ public class StudentsDatabaseController {
     }
     @PostMapping("/createStudent")
     public String createStudent(Student student, Model model) {
-
+        System.out.println(studentsRepo.findMaxId());
+        student.setId(studentsRepo.findMaxId() + 1);
         studentsRepo.save(student);
         model.addAttribute("users", studentsRepo.findAll());
         return "redirect:/students";
