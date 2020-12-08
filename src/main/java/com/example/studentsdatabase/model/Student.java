@@ -8,6 +8,7 @@ import javax.persistence.*;
 @Table(name="students")
 public class Student {
     @Id
+    @Column(name = "id")
     private  Long id;
     private  String firstname;
     private  String surname;
