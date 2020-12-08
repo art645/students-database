@@ -8,9 +8,6 @@
 <body>
 <h2>Новый студент</h2>
 <form action="#" th:action="@{/createStudent}" th:object="${student}" method="post">
-    <label for="id">ID</label>
-    <input type="number" th:field="*{id}" id="id">
-    </br>
     <label for="firstname">Имя</label>
     <input type="text" th:field="*{firstname}" id="firstname">
     </br>
